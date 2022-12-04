@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.zeeshan_s.firebasecontactapp.R;
 import com.zeeshan_s.firebasecontactapp.databinding.ActivityLoginBinding;
 
@@ -21,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private ActivityLoginBinding binding;
     FirebaseAuth firebaseAuth;
+    FirebaseUser firebaseUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,11 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
 
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (firebaseUser != null){
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            finish();
+        }
         firebaseAuth = FirebaseAuth.getInstance();
 
         //            ---------------- Login button -------------

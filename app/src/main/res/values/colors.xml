@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="th_back_white">#ffff</color>
+    <color name="mainAcTopColor">#F4EDED</color>
 </resources>

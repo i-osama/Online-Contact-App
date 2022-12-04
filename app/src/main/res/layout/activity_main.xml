@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mainAcTopColor"
     tools:context=".Activities.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -11,28 +12,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/mainAcTopColor"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:paddingTop="@dimen/_10sdp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
+            android:id="@+id/backOption"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/back_sign"
 
             android:layout_marginStart="@dimen/_6sdp"
+            android:src="@drawable/back_sign"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="invisible" />
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mainCurrentUsrImg"
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/batman"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="@dimen/_6sdp"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -40,7 +48,7 @@
         android:id="@+id/mainContactRecycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
 
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         tools:listitem="@layout/contact_recycler"
