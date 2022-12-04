@@ -8,11 +8,13 @@
     tools:context=".Activities.LoginActivity">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -37,87 +39,105 @@
                 android:id="@+id/logEmailEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:background="@drawable/edit_txt_corner_round_trans"
                 android:layout_marginStart="@dimen/_10sdp"
+
+                android:layout_marginTop="88dp"
                 android:layout_marginEnd="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_90sdp"
-
+                android:background="@drawable/edit_txt_corner_round_trans"
                 android:hint="Email address"
-                android:padding="@dimen/_12sdp"
-                android:textColorHint="@color/white"
-
-                android:textSize="@dimen/_20sdp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
 
                 android:inputType="text"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                />
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/white"
+
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
             <EditText
                 android:id="@+id/logPassEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
 
-                android:background="@drawable/edit_txt_corner_round_trans"
                 android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_20sdp"
-
-                app:layout_constraintTop_toBottomOf="@id/logEmailEt"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/edit_txt_corner_round_trans"
 
                 android:hint="password"
+
+                android:inputType="textPassword"
                 android:padding="@dimen/_10sdp"
                 android:textColorHint="@color/white"
 
                 android:textSize="@dimen/_20sdp"
-                android:inputType="textPassword"/>
+                app:layout_constraintTop_toBottomOf="@id/logEmailEt" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/logLogInBtn"
+                android:id="@+id/logAcLoginBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:text="Login"
-                android:textSize="@dimen/_22sdp"
-                android:textColor="@color/white"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_70sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
                 android:background="@drawable/edit_txt_corner_round_trans"
                 android:backgroundTint="#CD2196F3"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_70sdp"
                 android:padding="@dimen/_10sdp"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_22sdp"
 
-                app:layout_constraintTop_toBottomOf="@id/logPassEt"/>
+                app:layout_constraintTop_toBottomOf="@id/logPassEt" />
+
+            <ProgressBar
+                android:id="@+id/logProgressBar"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/logAcLoginBtn"
+                app:layout_constraintEnd_toEndOf="@id/logAcLoginBtn"
+                app:layout_constraintStart_toStartOf="@id/logAcLoginBtn"
+                app:layout_constraintTop_toTopOf="@+id/logAcLoginBtn" />
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:text="Don't have an account?!"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/registerOption" />
+
+            <TextView
+                android:id="@+id/registerOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginTop="92dp"
+                android:fontFamily="@font/pattaya"
+                android:text="Register here!!"
+                android:textAlignment="center"
+                android:textColor="@color/teal_200"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/logAcLoginBtn" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/allerta"
-        android:text="Don't have an account?!"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/registerOption" />
-
-    <TextView
-        android:id="@+id/registerOption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
-        android:fontFamily="@font/pattaya"
-        android:text="Register here!!"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/teal_200"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="6dp" />
 
 
 

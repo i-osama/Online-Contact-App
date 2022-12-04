@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="@dimen/_30sdp"
-        android:text="Online Contact App"
+        android:text="Contact Online"
         android:fontFamily="@font/pattaya"
         android:textAlignment="center"
         android:textColor="@color/black"

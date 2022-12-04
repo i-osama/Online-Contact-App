@@ -176,7 +176,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Company"
+                    android:hint="More info"
 
                     app:boxCornerRadiusBottomEnd="@dimen/_15sdp"
                     app:boxCornerRadiusBottomStart="@dimen/_15sdp"
@@ -194,7 +194,7 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/personCompany"
+                        android:id="@+id/addContactMoreInfo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/_18sdp"/>
@@ -204,7 +204,6 @@
 
             </LinearLayout>
 
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
     </ScrollView>
 

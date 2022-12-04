@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "824527870751",
+    "project_id": "contact-online-40f4f",
+    "storage_bucket": "contact-online-40f4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824527870751:android:4daa53d08fd7899bdfae2a",
+        "android_client_info": {
+          "package_name": "com.zeeshan_s.firebasecontactapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824527870751-e08cl9uapudpljicg2vqm6cqh2pr0cte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGQsX3z78p-HAao79t7WvVMCC2bcJN_oI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824527870751-e08cl9uapudpljicg2vqm6cqh2pr0cte.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
