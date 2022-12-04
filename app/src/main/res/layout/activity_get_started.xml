@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/th_back_white"
     tools:context=".Activities.GetStarted">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/_30sdp"
+        android:text="Online Contact App"
+        android:fontFamily="@font/pattaya"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_20sdp"
+         app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:id="@+id/imageView"
@@ -35,6 +47,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+
+        android:text="© Created by Osama Bin Hashim"
+        app:layout_constraintTop_toBottomOf="@id/getStartedBtn"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
