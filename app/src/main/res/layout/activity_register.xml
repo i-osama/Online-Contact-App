@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_dark_background"
+    tools:context=".Activities.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="@string/register_txt"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:fontFamily="@font/pattaya"/>
+
+            <EditText
+                android:id="@+id/regiName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:drawableStart="@drawable/account_icon_white"
+                android:paddingStart="15dp"
+                android:paddingEnd="10dp"
+
+                android:hint="Enter Name"
+                android:singleLine="true"
+                android:inputType="text"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/allerta"
+                android:textSize="22sp"
+                android:textColor="@color/white"/>
+
+
+            <EditText
+                android:id="@+id/regiEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="10dp"
+
+                android:inputType="textEmailAddress"
+                android:hint="Enter Email"
+                android:drawableStart="@android:drawable/sym_action_email"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/allerta"
+                android:textSize="22sp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/regiPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="10dp"
+
+                android:inputType="phone"
+                android:hint="Enter Phone number"
+                android:drawableStart="@android:drawable/stat_sys_phone_call"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/allerta"
+                android:textSize="22sp"
+                android:textColor="@color/white"/>
+
+
+            <EditText
+                android:id="@+id/regiPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="10dp"
+
+                android:inputType="textPassword"
+                android:hint="Enter Password"
+                android:drawableStart="@android:drawable/ic_lock_lock"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/allerta"
+                android:textSize="22sp"
+                android:textColor="@color/white"/>
+
+
+            <EditText
+                android:id="@+id/regiRePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="10dp"
+
+                android:inputType="textPassword"
+                android:hint="Re-enter password"
+                android:drawableStart="@android:drawable/ic_lock_lock"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/allerta"
+                android:textSize="22sp"
+                android:textColor="@color/white"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="6dp">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/regi_ac_registerBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_txt_corner_round_trans"
+                    android:backgroundTint="@color/teal_200"
+                    android:fontFamily="@font/allerta"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Register"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                <ProgressBar
+                    android:id="@+id/regi_ac_progressBar"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/allerta"
+                    android:textColor="@color/white"
+                    android:text="Already have an account? "/>
+
+                <TextView
+                    android:id="@+id/regi_ac_loginOption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/allerta"
+                    android:textColor="@color/teal_200"
+                    android:text="@string/login_txt"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
