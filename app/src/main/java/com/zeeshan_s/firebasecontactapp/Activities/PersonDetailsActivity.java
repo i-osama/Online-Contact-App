@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.Person;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -104,6 +106,36 @@ public class PersonDetailsActivity extends AppCompatActivity {
 
         binding.deleteOption.setOnClickListener(view -> {
 //            TODO: this sector is not complete
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(PersonDetailsActivity.this);
+            builder.setIcon(R.drawable.warning_icon);
+            builder.setMessage("Do you want to delete this contact?");
+            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                    databaseReference.child("contact").child(contactId).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()){
+                                Toast.makeText(PersonDetailsActivity.this, "Contact deleted!", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(PersonDetailsActivity.this, MainActivity.class));
+                            }
+                        }
+                    });
+                }
+            });
+
+            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                }
+            });
+
+            AlertDialog dialog = builder.create();
+            dialog.show();
+
         });
 
 //        ********* Dialing Number ********
