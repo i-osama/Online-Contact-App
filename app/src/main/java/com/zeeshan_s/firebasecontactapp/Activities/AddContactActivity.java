@@ -23,7 +23,7 @@ public class AddContactActivity extends AppCompatActivity {
     private ActivityAddContactBinding binding;
     DatabaseReference databaseReference;
     FirebaseUser firebaseUser;
-    String myUserId, newContactID;
+    String myUserId, newContactID, profileUrl = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +67,7 @@ public class AddContactActivity extends AppCompatActivity {
         contacts.put("email", email);
         contacts.put("address", address);
         contacts.put("moreInfo", moreInfo);
-        contacts.put("profileImgUrl", "");
+        contacts.put("profileImgUrl", profileUrl);
         databaseReference.child("contact").child(newContactID).setValue(contacts).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {

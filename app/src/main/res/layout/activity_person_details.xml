@@ -65,6 +65,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<!--    ............. more option ............-->
+    <ImageView
+        android:id="@+id/editOption"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_50sdp"
+
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/edit_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/saveOption"
+        android:visibility="gone"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/import_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -124,132 +147,150 @@
                 app:layout_constraintTop_toBottomOf="@+id/personOptionBucket"/>
 
             <LinearLayout
+                android:id="@+id/contactDetailBucket"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
 
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/personOptionBucket">
 
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
                     android:hint="Phone"
 
+                    android:textColorHint="#953F51B5"
                     app:boxCornerRadiusBottomEnd="@dimen/_15sdp"
                     app:boxCornerRadiusBottomStart="@dimen/_15sdp"
                     app:boxCornerRadiusTopEnd="@dimen/_15sdp"
                     app:boxCornerRadiusTopStart="@dimen/_15sdp"
 
-                    app:helperTextTextColor="#EF0606"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    android:layout_marginStart="@dimen/_20sdp"
-                    android:layout_marginEnd="@dimen/_20sdp"
                     app:boxStrokeColor="#0A0E22"
-
-                    android:textColorHint="#953F51B5"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    app:helperTextTextColor="#EF0606">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/personPhone"
-                        android:inputType="phone"
-                        android:textColor="@color/black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/_18sdp"/>
+                        android:inputType="phone"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
                     android:hint="Email"
 
+                    android:textColorHint="#953F51B5"
                     app:boxCornerRadiusBottomEnd="@dimen/_15sdp"
                     app:boxCornerRadiusBottomStart="@dimen/_15sdp"
                     app:boxCornerRadiusTopEnd="@dimen/_15sdp"
                     app:boxCornerRadiusTopStart="@dimen/_15sdp"
 
-                    app:helperTextTextColor="#EF0606"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginStart="@dimen/_20sdp"
-                    android:layout_marginEnd="@dimen/_20sdp"
                     app:boxStrokeColor="#0A0E22"
-
-                    android:textColorHint="#953F51B5"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    app:helperTextTextColor="#EF0606">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/personEmail"
-                        android:textColor="@color/black"
-                        android:inputType="textEmailAddress"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/_18sdp"/>
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
                     android:hint="Address"
 
+                    android:textColorHint="#953F51B5"
                     app:boxCornerRadiusBottomEnd="@dimen/_15sdp"
                     app:boxCornerRadiusBottomStart="@dimen/_15sdp"
                     app:boxCornerRadiusTopEnd="@dimen/_15sdp"
                     app:boxCornerRadiusTopStart="@dimen/_15sdp"
 
-                    app:helperTextTextColor="#EF0606"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginStart="@dimen/_20sdp"
-                    android:layout_marginEnd="@dimen/_20sdp"
                     app:boxStrokeColor="#0A0E22"
-
-                    android:textColorHint="#953F51B5"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    app:helperTextTextColor="#EF0606">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/personAddress"
-                        android:textColor="@color/black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/_18sdp"/>
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="More info"
 
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_40sdp"
+
+                    android:hint="More info"
+                    android:textColorHint="#953F51B5"
                     app:boxCornerRadiusBottomEnd="@dimen/_15sdp"
                     app:boxCornerRadiusBottomStart="@dimen/_15sdp"
                     app:boxCornerRadiusTopEnd="@dimen/_15sdp"
                     app:boxCornerRadiusTopStart="@dimen/_15sdp"
 
-                    app:helperTextTextColor="#EF0606"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginBottom="@dimen/_220sdp"
-                    android:layout_marginStart="@dimen/_20sdp"
-                    android:layout_marginEnd="@dimen/_20sdp"
                     app:boxStrokeColor="#0A0E22"
-
-                    android:textColorHint="#953F51B5"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    app:helperTextTextColor="#EF0606">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/personMoreInfo"
-                        android:textColor="@color/black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/_18sdp"/>
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
 
             </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/deleteOption"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/delete_icon"
+                android:background="@drawable/floating_btn_round"
+                android:backgroundTint="#46C5864E"
+
+                app:layout_constraintTop_toBottomOf="@id/contactDetailBucket"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/_200sdp"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
