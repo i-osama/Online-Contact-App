@@ -22,7 +22,7 @@
         android:id="@+id/personProfileImg"
         android:layout_width="@dimen/_90sdp"
         android:layout_height="@dimen/_90sdp"
-        android:src="@drawable/batman"
+        android:src="@drawable/add_img_icon"
         app:civ_border_width="2dp"
         app:civ_border_color="#ABDDE6ED"
         android:layout_marginTop="@dimen/_25sdp"
@@ -40,6 +40,7 @@
         android:layout_marginTop="@dimen/_10sdp"
 
         android:hint="User name"
+        android:textColorHint="#D1C3C3"
         android:backgroundTint="@color/th_back_white"
         android:textColor="@color/white"
         android:textAlignment="center"
@@ -51,13 +52,14 @@
 
     <ImageView
         android:id="@+id/addConSaveOption"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_50sdp"
-        android:src="@android:drawable/ic_menu_save"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/save_icon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="@dimen/_10sdp"/>
     <ImageView
+        android:id="@+id/backBtn"
         android:layout_width="@dimen/_50sdp"
         android:layout_height="@dimen/_50sdp"
         android:src="@drawable/back_sign_white"

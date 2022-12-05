@@ -25,7 +25,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
     List<ContactModel> contactModelList;
 
     public UserAdapter(Context context, List<ContactModel> contactModelList) {
-        Log.i("TAG", "-------Constructor------");
         this.context = context;
         this.contactModelList = contactModelList;
     }
@@ -40,7 +39,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
-        Log.i("TAG", "Bind View Holder --------- ");
 
         ContactModel model = contactModelList.get(position);
         holder.userName.setText(model.getName());
