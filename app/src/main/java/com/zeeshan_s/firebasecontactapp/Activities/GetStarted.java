@@ -23,6 +23,7 @@ public class GetStarted extends AppCompatActivity {
         boolean isClicked = preferences.getBoolean("userClicked", false);
         if (isClicked){
             startActivity(new Intent(GetStarted.this, LoginActivity.class));
+            finish();
         }
 
         startBtn.setOnClickListener(view -> {
@@ -32,6 +33,7 @@ public class GetStarted extends AppCompatActivity {
 
             Intent intent = new Intent(GetStarted.this, LoginActivity.class);
             startActivity(intent);
+            finish();
 
         });
 

@@ -32,31 +32,38 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
-        <EditText
-            android:id="@+id/personName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:includeFontPadding="false"
-            android:layout_marginTop="@dimen/_10sdp"
 
-            android:text="Osama Bin Hashim"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:textSize="@dimen/_20sdp"
-            android:padding="@dimen/_8sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-            app:layout_constraintTop_toBottomOf="@id/personProfileImg"
-            app:layout_constraintBottom_toBottomOf="@id/personCover"/>
+    <EditText
+        android:id="@+id/personName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/_10sdp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:hint="Contact name"
+        android:textColorHint="#B8B1B1"
+        android:includeFontPadding="false"
+        android:padding="@dimen/_8sdp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="@id/personCover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/personProfileImg" />
 
     <ImageView
+        android:id="@+id/backBtn"
         android:layout_width="@dimen/_50sdp"
         android:layout_height="@dimen/_50sdp"
-        android:src="@drawable/back_sign_white"
 
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="@dimen/_10sdp"
-        android:padding="@dimen/_8sdp"/>
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/back_sign_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -68,7 +75,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_200sdp">
 
             <LinearLayout
                 android:id="@+id/personOptionBucket"
@@ -120,6 +128,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginTop="@dimen/_10sdp"
+
                 app:layout_constraintTop_toBottomOf="@id/personOptionBucket">
 
 
@@ -145,6 +154,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/personPhone"
                         android:inputType="phone"
+                        android:textColor="@color/black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/_18sdp"/>
@@ -172,6 +182,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/personEmail"
+                        android:textColor="@color/black"
                         android:inputType="textEmailAddress"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -200,6 +211,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/personAddress"
+                        android:textColor="@color/black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/_18sdp"/>
@@ -219,7 +231,7 @@
 
                     app:helperTextTextColor="#EF0606"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_220sdp"
                     android:layout_marginStart="@dimen/_20sdp"
                     android:layout_marginEnd="@dimen/_20sdp"
                     app:boxStrokeColor="#0A0E22"
@@ -229,6 +241,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/personMoreInfo"
+                        android:textColor="@color/black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/_18sdp"/>

@@ -3,9 +3,6 @@ package com.zeeshan_s.firebasecontactapp.Model;
 public class ContactModel {
     String contactOwnerID, contactID, name, phone, email, address, moreInfo, profileImgUrl;
 
-    public ContactModel() {
-    }
-
     public ContactModel(String contactOwnerID, String contactID, String name, String phone, String email, String address, String moreInfo, String profileImgUrl) {
         this.contactOwnerID = contactOwnerID;
         this.contactID = contactID;
@@ -16,6 +13,8 @@ public class ContactModel {
         this.moreInfo = moreInfo;
         this.profileImgUrl = profileImgUrl;
     }
+
+    public ContactModel() {}
 
     public String getContactOwnerID() {
         return contactOwnerID;

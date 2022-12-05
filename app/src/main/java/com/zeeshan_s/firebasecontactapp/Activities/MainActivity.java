@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -34,23 +35,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         contactList = new ArrayList<>();
-        userDatabaseRef = FirebaseDatabase.getInstance().getReference("contact");
+        userDatabaseRef = FirebaseDatabase.getInstance().getReference();
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        userDatabaseRef.addValueEventListener(new ValueEventListener() {
+//        Log.i("TAG", "Owner: "+ firebaseUser.getUid());
+
+        userDatabaseRef.child("contact").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 contactList.clear();
                 for (DataSnapshot dataSnapshot: snapshot.getChildren()){
                     ContactModel contact = dataSnapshot.getValue(ContactModel.class);
 
-                    if (!contact.getContactOwnerID().equals(firebaseUser.getUid())) {
+                    if (contact.getContactOwnerID().equals(firebaseUser.getUid())) {
                         contactList.add(contact);
                     }
                 }
 //                ----------------------- Recycler Adapter --------------
-                UserAdapter adapter = new UserAdapter(MainActivity.this, contactList);
-                binding.mainContactRecycler.setAdapter(adapter);
+                setDataToAdapter();
+
             }
 
             @Override
@@ -69,6 +72,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, AddContactActivity.class));
         });
 
+    }
+
+    private void setDataToAdapter() {
+        UserAdapter adapter = new UserAdapter(MainActivity.this, contactList);
+        binding.mainContactRecycler.setAdapter(adapter);
     }
 
 }

@@ -3,6 +3,7 @@ package com.zeeshan_s.firebasecontactapp.AllAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.zeeshan_s.firebasecontactapp.Activities.PersonDetailsActivity;
 import com.zeeshan_s.firebasecontactapp.AllViewHolder.UserViewHolder;
 import com.zeeshan_s.firebasecontactapp.Model.ContactModel;
 import com.zeeshan_s.firebasecontactapp.Model.UserModel;
@@ -23,6 +25,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
     List<ContactModel> contactModelList;
 
     public UserAdapter(Context context, List<ContactModel> contactModelList) {
+        Log.i("TAG", "-------Constructor------");
         this.context = context;
         this.contactModelList = contactModelList;
     }
@@ -30,12 +33,15 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
     @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+//        Log.i("TAG", "In the view method");
         View view = LayoutInflater.from(context).inflate(R.layout.contact_recycler, parent, false);
         return new UserViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
+        Log.i("TAG", "Bind View Holder --------- ");
+
         ContactModel model = contactModelList.get(position);
         holder.userName.setText(model.getName());
         holder.userNumber.setText(model.getPhone());
@@ -44,6 +50,12 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
         holder.callOption.setOnClickListener(view -> {
             String phone = model.getPhone();
             Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
+            context.startActivity(intent);
+        });
+
+        holder.itemView.setOnClickListener(view -> {
+            Intent intent = new Intent(context, PersonDetailsActivity.class);
+            intent.putExtra("contactID", model.getContactID());
             context.startActivity(intent);
         });
     }
